@@ -15,7 +15,7 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QVBoxLayout,
                              QCheckBox, QGroupBox, QGridLayout,
                              QDesktopWidget, QListWidget, QListWidgetItem)
 from PyQt5.QtCore import QTimer, Qt, QThread, pyqtSignal
-from PyQt5.QtGui import QFont, QColor, QPainter, QPen
+from PyQt5.QtGui import QFont, QColor, QPainter, QPen, QIcon
 
 # Design System Constants (Following Laws of UX)
 COLORS = {
@@ -206,6 +206,9 @@ class MouseCoordinateTracker(QMainWindow):
         """Initialize the user interface following UX design principles."""
         self.setWindowTitle("Mouse Coordinate Tracker")
         self.setStyleSheet(f"background-color: {COLORS['background']};")
+        
+        # Set application icon
+        self.set_window_icon()
 
         main_widget = QWidget()
         self.setCentralWidget(main_widget)
@@ -238,6 +241,23 @@ class MouseCoordinateTracker(QMainWindow):
 
         layout.addStretch(1)
         self.center_window()
+
+    def set_window_icon(self):
+        """Set the window icon from assets folder."""
+        icon_paths = [
+            "assets/mouse_icon_64x64.png",
+            "assets/mouse_icon_32x32.png", 
+            "assets/mouse_icon.svg"
+        ]
+        
+        for icon_path in icon_paths:
+            if os.path.exists(icon_path):
+                try:
+                    icon = QIcon(icon_path)
+                    self.setWindowIcon(icon)
+                    break
+                except Exception:
+                    continue
 
     def create_coord_group(self):
         """Create the coordinate display group box."""

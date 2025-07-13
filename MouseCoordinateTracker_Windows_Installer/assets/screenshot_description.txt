@@ -1,0 +1,11 @@
+# Note: This is a placeholder for the screenshot
+# The actual screenshot should be saved as "screenshot.png" in the assets folder
+# This file serves as documentation for the screenshot location
+Screenshot shows the Mouse Coordinate Tracker GUI with:
+- Title: "Mouse Coordinate Tracker"
+- Current Coordinates section showing X: 0, Y: 0
+- Controls section with "Start Tracking", "Copy Coordinates" buttons
+- "Enable Highlight" checkbox
+- Status showing "Ready to track mouse coordinates"
+- Saved Coordinates section with "Copy Selected", "Copy All", "Clear List" buttons
+- The GUI has a clean, modern appearance with proper spacing and organization
