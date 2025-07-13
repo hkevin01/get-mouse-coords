@@ -1,5 +1,9 @@
 # Mouse Coordinate Tracker
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.6+](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/doc/versions/)
+[![Made with PyQt5](https://img.shields.io/badge/Made%20with-PyQt5-brightgreen.svg)](https://www.riverbankcomputing.com/software/pyqt/)
+
 A Python application to track and display mouse coordinates with both GUI and command-line interfaces.
 
 ## Features
